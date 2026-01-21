@@ -2,19 +2,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc;
         String name;
         Integer age;
 
         HashMap<Integer, List<User>> users = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Введите имя пользователя " + (i + 1));
-            sc = new Scanner(System.in);
             name = sc.nextLine();
 
             System.out.println("Введите возраст пользователя " + (i + 1));
-            sc = new Scanner(System.in);
             age = sc.nextInt();
 
             if (!users.containsKey(age)) {
@@ -24,7 +22,6 @@ public class Main {
         }
 
         System.out.println("Введите требуемый возраст");
-        sc = new Scanner(System.in);
         age = sc.nextInt();
 
         if (users.containsKey(age)) {
